@@ -1,0 +1,13 @@
+com\portfolioai\model\BacktestResponse.class
+com\portfolioai\model\PortfolioResponse.class
+com\portfolioai\service\RiskService.class
+com\portfolioai\controller\PortfolioController.class
+com\portfolioai\PortfolioAiApplication.class
+com\portfolioai\service\BacktestService.class
+com\portfolioai\model\PortfolioRequest.class
+com\portfolioai\model\QuizAnswers.class
+com\portfolioai\service\RiskService$RiskResult.class
+com\portfolioai\service\MarketDataService.class
+com\portfolioai\service\OptimizerService.class
+com\portfolioai\service\PortfolioService.class
+com\portfolioai\service\MarketDataService$ReturnStats.class
