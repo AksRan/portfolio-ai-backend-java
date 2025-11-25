@@ -1,4 +1,4 @@
-📈 Portfolio AI — Backend (Java Spring Boot)
+Portfolio AI — Backend (Java Spring Boot)
 Portfolio AI is an intelligent investment‑recommendation backend built with Java Spring Boot.
 It powers the Portfolio AI website by calculating:
 
@@ -14,14 +14,10 @@ Interpretations and explanations for the final portfolio
 
 This backend provides the API endpoints consumed by the Wix‑based front‑end.
 
-🚀 Live Frontend (Test Site)
-🔗 Wix Test Site:
-Add your test link here
+Live Frontend (Test Site)
+Wix Test Site: https://akshatranjan77.wixsite.com/portfolio-ai/faq?rc=test-site
 
-🔗 Backend API (Render):
-Add your Render service URL here (e.g., https://portfolio-ai.onrender.com)
-
-🧠 What the Backend Does
+What the Backend Does
 The backend processes input from the user:
 
 risk: "low" | "medium" | "high"
@@ -80,14 +76,14 @@ Render (free hosting)
 
 REST API
 
-📂 Project Structure
+Project Structure
 src/main/java/com.portfolioai
 ├── controllers       # REST endpoints
 ├── services          # risk logic, optimizers
 ├── models            # request/response DTOs
 ├── optimizers        # portfolio allocation logic
 └── PortfolioAiApplication.java
-💻 Run Locally
+Run Locally
 1. Clone the repo
 git clone https://github.com/AksRan/portfolio-ai-backend-java.git
 2. Build
@@ -100,7 +96,7 @@ http://localhost:8080/api/portfolio/recommend
 
 Use Thunder Client, Postman, or curl.
 
-🌐 Deployment (Render)
+Deployment (Render)
 This backend is deployed using Render’s free tier.
 
 Render automatically detects:
@@ -125,7 +121,7 @@ Start command:
 java -jar target/portfolio-ai.jar
 Exposed port: 8080
 
-🧪 Wix Frontend Integration
+Wix Frontend Integration
 The Wix website calls this backend using:
 
 fetch("https://your-render-backend-url/api/portfolio/recommend", {
@@ -135,8 +131,9 @@ fetch("https://your-render-backend-url/api/portfolio/recommend", {
 })
 The returned JSON is rendered directly into the UI.
 
-📬 Contact
+Contact
 AksRan
 Developer — Portfolio AI
 GitHub: https://github.com/AksRan
+
 
