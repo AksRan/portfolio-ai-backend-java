@@ -1,11 +1,12 @@
 package com.portfolioai.service;
 
-import com.portfolioai.model.PortfolioRequest;
-import com.portfolioai.model.PortfolioResponse;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.portfolioai.model.PortfolioRequest;
+import com.portfolioai.model.PortfolioResponse;
 
 @Service
 public class PortfolioService {
@@ -14,11 +15,13 @@ public class PortfolioService {
     private final MarketDataService marketDataService;
     private final OptimizerService optimizerService;
 
-    private final List<String> ASSETS = List.of("VOO", "VXUS", "BND");
+    private static final List<String> ASSETS = List.of("VOO", "VXUS", "BND");
 
-    public PortfolioService(RiskService riskService,
-                            MarketDataService marketDataService,
-                            OptimizerService optimizerService) {
+    public PortfolioService(
+            RiskService riskService,
+            MarketDataService marketDataService,
+            OptimizerService optimizerService
+    ) {
         this.riskService = riskService;
         this.marketDataService = marketDataService;
         this.optimizerService = optimizerService;
@@ -26,14 +29,14 @@ public class PortfolioService {
 
     public PortfolioResponse generate(PortfolioRequest req) throws Exception {
 
-        var rr = riskService.profile(req.answers);
+        var rr = riskService.profile(req.getAnswers());
 
         MarketDataService.ReturnStats stats = marketDataService.loadReturns(ASSETS, 3);
 
         Map<String, Double> weights;
         String optUsed;
 
-        String optimizer = (req.optimizer == null) ? "mvo" : req.optimizer;
+        String optimizer = (req.getOptimizer() == null) ? "mvo" : req.getOptimizer();
 
         try {
             if ("risk_parity".equalsIgnoreCase(optimizer)) {
@@ -44,14 +47,12 @@ public class PortfolioService {
                 optUsed = "mvo";
             }
         } catch (Exception e) {
-            if (!req.useTemplatesIfNeeded) throw e;
+            if (!req.isUseTemplatesIfNeeded()) throw e;
             weights = optimizerService.templatesForTier(rr.tier);
             optUsed = "templates";
         }
 
         String explanation = optimizerService.explanation(rr.tier, rr.constraints, weights);
-
         return new PortfolioResponse(rr.score, rr.tier, weights, explanation, optUsed);
     }
 }
-

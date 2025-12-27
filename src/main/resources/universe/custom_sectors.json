@@ -1,0 +1,7 @@
+{
+  "tech": ["AAPL","MSFT","NVDA","AMD","AVGO","QCOM","ORCL","CRM","ADBE","INTU","CSCO","TXN","AMAT","MU","NOW","PANW","CRWD","IBM","ACN","INTC"],
+  "media": ["NFLX","DIS","CMCSA","GOOGL","META","TTWO","EA","SPOT","WBD","PARA","FOX","FOXA","LYV","ROKU","SONY","IPG","OMC","NWSA","NWS","CHTR"],
+  "sport": ["NKE","ADDYY","PUMA","UAA","DKS","ASO","DECK","VFC","COLM","FL","WWW","BRP","YETI","GPRO","SKX","HIBB","MODG","LEVI","CROX","ETSY"],
+  "fashion": ["LULU","TPR","RL","VFC","LEVI","PVH","KSS","M","TJX","ROST","BURL","GPS","URBN","ANF","AEO","SKX","CROX","ETSY","EL","ULTA"],
+  "food": ["MCD","SBUX","YUM","CMG","KO","PEP","MNST","KDP","GIS","K","HSY","MDLZ","KHC","TSN","CAG","CPB","WMT","COST","KR","SYY"]
+}

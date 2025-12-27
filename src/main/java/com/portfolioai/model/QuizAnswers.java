@@ -1,8 +1,25 @@
 package com.portfolioai.model;
 
 public class QuizAnswers {
-    public String risk_tolerance;       // low / med / high
-    public String horizon;              // <1y / 1-5y / 5y+
-    public String goal;                 // income / mix / growth
-    public String market_drop_reaction; // panic / hold / buy_more
+
+    private String riskTolerance;
+    private String horizon;
+    private String goal;
+    private String marketDropReaction;
+
+    public String getRiskTolerance() {
+        return riskTolerance;
+    }
+
+    public String getHorizon() {
+        return horizon;
+    }
+
+    public String getGoal() {
+        return goal;
+    }
+
+    public String getMarketDropReaction() {
+        return marketDropReaction;
+    }
 }
